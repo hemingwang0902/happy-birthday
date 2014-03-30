@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43f2aee5-9cd6-4b49-81fe-0349c8566d59" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\workspace\github-repository\fss\images\16zgcrjy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\github-repository\fss\images\5qjd.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/3zhuaniu1.jpg" afterPath="$PROJECT_DIR$/images/3zhuaniu1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/19bjdx.jpg" />
+      <change type="DELETED" beforePath="D:\workspace\github-repository\fss\images\12slt1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\github-repository\fss\images\19jy.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/12w_xd1.jpg" afterPath="$PROJECT_DIR$/images/12w_xd1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/12w_xd4.jpg" afterPath="$PROJECT_DIR$/images/12w_xd4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/18wfj5.jpg" afterPath="$PROJECT_DIR$/images/18wfj5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/6bjdwy2.jpg" afterPath="$PROJECT_DIR$/images/6bjdwy2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/8dst-1.jpg" afterPath="$PROJECT_DIR$/images/8dst-1.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\workspace\github-repository\fss\images\16wjl.jpg" afterPath="$PROJECT_DIR$/images/10bjhl1.jpg" />
-      <change type="MOVED" beforePath="D:\workspace\github-repository\fss\images\7hysj.jpg" afterPath="$PROJECT_DIR$/images/7hysj3.jpg" />
+      <change type="MOVED" beforePath="D:\workspace\github-repository\fss\images\4nlgx.jpg" afterPath="$PROJECT_DIR$/images/9hgs1.jpg" />
     </list>
     <ignored path="fss.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="43f2aee5-9cd6-4b49-81fe-0349c8566d59" time="1396180841413" ignored="false" />
+    <file path="/index.html" changelist="43f2aee5-9cd6-4b49-81fe-0349c8566d59" time="1396200026212" ignored="false" />
     <file path="/Dummy.txt" changelist="43f2aee5-9cd6-4b49-81fe-0349c8566d59" time="1396161092174" ignored="false" />
     <file path="/fragment.js2" changelist="43f2aee5-9cd6-4b49-81fe-0349c8566d59" time="1396172341488" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +82,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1506" column="16" selection-start="48722" selection-end="48722" vertical-scroll-proportion="0.17533718">
+            <state line="447" column="94" selection-start="19218" selection-end="19218" vertical-scroll-proportion="0.5925926">
               <folding />
             </state>
           </provider>
@@ -351,7 +355,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19554031" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19554031" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -366,7 +370,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19924243" sideWeight="0.67066896" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19924243" sideWeight="0.8044597" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -439,84 +443,84 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/3zhuaniu1.jpg">
+    <entry file="file://$PROJECT_DIR$/images/bj_hy3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/3zhuaniu3.jpg">
+    <entry file="file://$PROJECT_DIR$/images/110bj_hlg10_1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/10bjhl.jpg">
+    <entry file="file://$PROJECT_DIR$/images/110bj_hlg10.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/10bjhl1.jpg">
+    <entry file="file://$PROJECT_DIR$/images/110bj_hlg9.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/5qjd0.jpg">
+    <entry file="file://$PROJECT_DIR$/images/110bj_hlg8.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/20hdgy2.jpg">
+    <entry file="file://$PROJECT_DIR$/images/110bj_hlg5.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/17bjtydx.jpg">
+    <entry file="file://$PROJECT_DIR$/images/110bj_hlg6.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/18wfj1.jpg">
+    <entry file="file://$PROJECT_DIR$/images/8dst1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/18wfj2.jpg">
+    <entry file="file://$PROJECT_DIR$/images/8dst2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/18wfj3.jpg">
+    <entry file="file://$PROJECT_DIR$/images/8dst4.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/18wfj4.jpg">
+    <entry file="file://$PROJECT_DIR$/images/8dst5.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/18wfj5.jpg">
+    <entry file="file://$PROJECT_DIR$/images/8dst6.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/20hdgy0.jpg">
+    <entry file="file://$PROJECT_DIR$/images/8dst7.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/21dzl8.jpg">
+    <entry file="file://$PROJECT_DIR$/images/8dst8.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/21dzl2.jpg">
+    <entry file="file://$PROJECT_DIR$/images/8dst9.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1506" column="16" selection-start="48722" selection-end="48722" vertical-scroll-proportion="0.17533718">
+        <state line="447" column="94" selection-start="19218" selection-end="19218" vertical-scroll-proportion="0.5925926">
           <folding />
         </state>
       </provider>

@@ -103,7 +103,7 @@ body {
 <!-- 指定全局的分享内容 -->
 <input id="wsContent" type="hidden" value="一个送给老婆的生日礼物，也是送给所有异地恋人的礼物「变得是距离，不变的是坚持」！">
 <!-- 指定全局的分享链接 -->
-<input id="wsUrl" type="hidden" value="http://liumeijun.com/">
+<input id="wsUrl" type="hidden" value="http://www.liuyourun.com/">
 <!-- 指定全局的分享图片 -->
 <input id="wsPic" type="hidden" value="social.png">
 
@@ -135,17 +135,51 @@ var GD_GZS = {lng: 113.256838, lat: 23.157309};
 var GD_HYS = {lng: 114.701682, lat: 23.754195};
 
 
-//北京中关村森林公园
-var BJ_ZGCSLGY = {lng:116.305054, lat: 40.05497};
+//北京中关村软件园
+var BJ_ZGCSLGY = {lng:116.296675,lat: 40.070659};
 //儋州中心公园
 var DZ_ZXGY = {lng:109.600665, lat: 19.527104};
-//海口美兰机场
-var HK_MZGC = {lng:110.370831, lat: 20.036267};
 //北京市
-var GD_BYS = {lng: 116.415192, lat: 39.910618};
+var CITY_BJS = {lng: 116.415192, lat: 39.910618};
 //儋州市
-var GD_DZS = {lng: 109.576716, lat: 19.541881};
+var CITY_DZS = {lng: 109.576716, lat: 19.541881};
+//天津市
+var CITY_TJS = {lng: 117.217514, lat: 39.145105};
 
+var TJ = {
+    HUO_CHE_ZHAN : {lng: 117.215818,lat:39.141564}
+}
+var BJ = {
+    SHOU_DU_AIRPORT : {lng: 116.599373, lat: 40.085678},//首都机场
+    TIAN_AN_MEN : {lng: 116.404015, lat: 39.912733},//首都天安门
+    ZGC_SOFT_PARK : {lng: 116.298982, lat:40.054663},//首都中关村软件园
+    JIA_HUA_MOVIE_THEATER :  {lng: 116.360465, lat:40.014328},//首都-学清路-嘉华国际影城
+    CHAO_YANG_JOY_CITY : {lng: 116.360465, lat:40.014328},//首都-朝阳大悦城-金银岛英雄联盟
+    CITY_BJS_NAN_LUO_GU_XIANG : {lng: 116.409543, lat:39.940445},//首都-南锣鼓巷
+    MA_JIA_PU_QUAN_JU_DE : {lng: 116.385184,lat:39.850229},//首都-马家堡-全聚德
+    ZOO : {lng: 116.34203,lat:39.947047},//动物园
+    SUBMARINE_WORLD : {lng: 116.312656,lat:39.92479},//太平洋海底世界
+    CCTV_TOWER : {lng: 116.312781,lat:39.925488},//中央电视塔
+    HU_GUO_SI : {lng: 116.379375,lat:39.941849},//护国寺
+    SHANG_DI_HUA_LIAN : {lng: 116.31805,lat:40.035192},//上地华联
+    WU_DAO_KOU_WANG_YI : {lng: 116.33774,lat:39.998874},//五道口-网易
+    SAN_LI_TUN : {lng: 116.461914,lat:39.939606},//三里屯
+    XI_DAN : {lng: 116.378948,lat:39.917527},//西单大悦城
+    YUAN_MING_YUAN : {lng: 116.310544,lat:40.011613},//圆明园
+    XIANG_SHAN : {lng: 116.196341,lat:39.996594},//香山公园
+    HUI_LONG_GUAN : {lng: 116.340705,lat:40.080745},//回龙观-啃壹锅
+    BTI_TI_BIAN_YI_FANG : {lng: 116.320378,lat:40.026753},//北体-便宜坊
+    WANG_FU_JING : {lng: 116.417863,lat:39.920198},//王府井
+    SHANG_DI_JU_YUAN : {lng: 116.299643,lat:40.040779},//上地菊园
+    HAI_DIAN_GONG_YUAN : {lng: 116.301918,lat:39.993153},//海淀公园
+    DA_ZHA_LAN : {lng: 116.400959,lat:39.902037},//大栅栏
+    CHAO_YANG_QU : {lng: 116.444513,lat:39.96194},//朝阳区
+    HUAN_LE_GU : {lng: 116.501593,lat:39.874099},//欢乐谷
+    DA_KU_CHA : {lng: 116.470909,lat:39.920992},//大裤衩
+    MU_XI_YUAN : {lng: 116.405239,lat:39.867267},//木樨园
+    SHANG_DI : {lng: 116.310352,lat:40.051673},//上地
+    HUO_CHE_NAN_ZHAN :{lng: 116.385521,lat:39.87113}//火车南站
+}
 // 背景音乐
 var MUSIC;
 
@@ -205,19 +239,19 @@ function loopWin(loopList, time, callback) {
     loopWinInner();
 }
 
-function panZoom_GTC() {
+function panZoom_DZZXGY() {
     map.panTo(new BMap.Point(DZ_ZXGY.lng, DZ_ZXGY.lat));
     setTimeout(function() {
         zoomTo(18, 800, function() {
             var marker = new BMap.Marker(DZ_ZXGY);
             map.addOverlay(marker);
             marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-            setTimeout(panZoom_JYU, 1000);
+            setTimeout(panZoom_BJZGCSLGY, 1000);
         }, DZ_ZXGY);
     }, 800);
 }
 
-function panZoom_JYU() {
+function panZoom_BJZGCSLGY() {
     zoomTo(8, 1000, function() {
         map.panTo(new BMap.Point(BJ_ZGCSLGY.lng, BJ_ZGCSLGY.lat));
         setTimeout(function() {
@@ -225,18 +259,18 @@ function panZoom_JYU() {
                 var marker = new BMap.Marker(BJ_ZGCSLGY);
                 map.addOverlay(marker);
                 marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-                setTimeout(panZoom_HEY, 1000);
+                setTimeout(panZoom_DZ2BJ, 1000);
             });
         }, 1000);
     });
 }
 
-function panZoom_HEY() {
+function panZoom_DZ2BJ() {
     zoomTo(9, 1000, function() {
-        map.panTo(new BMap.Point(GD_BYS.lng, GD_BYS.lat));
+        map.panTo(new BMap.Point(CITY_BJS.lng, CITY_BJS.lat));
         setTimeout(function() {
-            var start = new BMap.Point(BJ_ZGCSLGY.lng, BJ_ZGCSLGY.lat);
-            var end   = new BMap.Point(DZ_ZXGY.lng, DZ_ZXGY.lat);
+            var start   = new BMap.Point(DZ_ZXGY.lng, DZ_ZXGY.lat);
+            var end = new BMap.Point(BJ_ZGCSLGY.lng, BJ_ZGCSLGY.lat);
             var driving2 = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});
             driving2.search(start, end);
             setTimeout(function() {
@@ -252,53 +286,397 @@ function panZoom_HEY() {
                         point: DZ_ZXGY
                     },
                     {
-                        title: '变得是距离，不变的是坚持！',
-                        content: '<img src="images/0feiji.jpg" width="200" height="149" alt="airplane" />',
+                        title: '「变得是距离，不变的是坚持」',
+                        content: '<img src="images/0feiji.jpg" width="200" height="149" alt="「变得是距离，不变的是坚持」" />',
                         point: DZ_ZXGY
                     }
                 ];
-                loopWin(between, 2000, showPhotos);
+                loopWin(between, 2000, showBJPhotos);
             }, 2000);
         }, 1000);
     });
 }
 
-function showPhotos() {
+function showBJPhotos() {
     map.clearOverlays();
-    map.panTo(new BMap.Point(GD_BYS.lng, GD_BYS.lat));
-    setTimeout(function() {
-        zoomTo(13, 1000, function() {
-            var photos = [
+    map.panTo(new BMap.Point(CITY_BJS.lng, CITY_BJS.lat));
+    setTimeout(function () {
+        zoomTo(13, 1000, function () {
+            var bj_photos = [
                 {
-                    title: '美兰机场',
-                    content: '<img src="images/feiji.jpg" width="500" height="373" alt="美兰机场" />',
-                    point: {lng: 113.271147, lat: 23.139616}
+                    title: '首都机场',
+                    content: '<img src="images/0feiji1.jpg" width="200" height="150" alt="首都机场" />',
+                    point: {lng: BJ.SHOU_DU_AIRPORT.lng, lat:BJ.SHOU_DU_AIRPORT.lat}
+                },
+                {
+                    title: '天安门',
+                    content: '<img src="images/_9tam.jpg" width="200" height="150" alt="天安门" /><img src="images/_9tam1.jpg" width="200" height="150" alt="天安门" />',
+                    point: {lng: BJ.TIAN_AN_MEN.lng, lat: BJ.TIAN_AN_MEN.lat}
                 },
                 {
                     title: '中关村软件园',
-                    content: '<img src="images/zgcrjy1.jpg" width="500" height="373" alt="中关村软件园" />',
-                    point: {lng: 113.252764, lat: 23.131838}
+                    content: '<img src="images/1zgcrjy.jpg" width="200" height="150" alt="中关村软件园" />' +
+                            '<img src="images/1zgcrjy2.jpg" width="125" height="167" alt="中关村软件园" />' +
+                            '<img src="images/1zgcrjy3.jpg" width="200" height="150" alt="中关村软件园" />',
+                    point: {lng: BJ.ZGC_SOFT_PARK.lng, lat: BJ.ZGC_SOFT_PARK.lat}
                 },
                 {
                     title: '嘉华国际影城',
-                    content: '<img src="images/tiedani2.jpg" width="500" height="373" alt="嘉华国际影城" />',
-                    point: {lng: 113.268865, lat: 23.200458}
+                    content: '<img src="images/2tiedani0.jpg" width="150" height="200" alt="嘉华国际影城" /><img src="images/2tiedani2.jpg" width="160" height="125" alt="嘉华国际影城" /><img src="images/2tiedani.jpg" width="160" height="125" alt="嘉华国际影城-铁达尼号-雷人翻译【你跳，我跳！】" />',
+                    point: {lng: BJ.JIA_HUA_MOVIE_THEATER.lng, lat: BJ.JIA_HUA_MOVIE_THEATER.lat}
                 },
                 {
-                    title: '金银岛英雄联盟-抓娃娃-旋转木马',
-                    content: '<img src="images/zhuaniu3.jpg" width="500" height="373" alt="金银岛英雄联盟-抓娃娃" />' +
-                            '<img src="images/3zhuaniu1.jpg" width="500" height="373" alt="旋转木马" />',
+                    title: '朝阳大悦城-金银岛英雄联盟-抓娃娃-旋转木马',
+                    content: '<img src="images/3zhuaniu_1.jpg" width="150" height="200" alt="抓牛" />' +
+                            '<img src="images/3zhuaniu.jpg" width="160" height="125" alt="收获" />' +
+                            '<img src="images/3zhuaniu1.jpg" width="160" height="125" alt="切水果" />' +
+                            '<img src="images/3zhuaniu2.jpg" width="150" height="125" alt="跳舞机" />' +
+                            '<img src="images/3zhuaniu3.jpg" width="160" height="125" alt="旋转木马" />',
+                    point: {lng: BJ.CHAO_YANG_JOY_CITY.lng, lat: BJ.CHAO_YANG_JOY_CITY.lat}
+                },
+                {
+                    title: '南锣鼓巷',
+                    content: '<img src="images/4nlgx.jpg" width="500" height="373" alt="南锣鼓巷" />',
+                    point: {lng: BJ.CITY_BJS_NAN_LUO_GU_XIANG.lng, lat: BJ.CITY_BJS_NAN_LUO_GU_XIANG.lat}
+                },
+                {
+                    title: '马家堡-全聚德',
+                    content: '<img src="images/5qjd0.jpg" width="150" height="200" alt="马家堡-全聚德" />' +
+                            '<img src="images/5qjd1.jpg" width="160" height="125" alt="马家堡-全聚德" />',
+                    point: {lng: BJ.MA_JIA_PU_QUAN_JU_DE.lng, lat: BJ.MA_JIA_PU_QUAN_JU_DE.lat}
+                },
+                {
+                    title: '北京动物园',
+                    content: '<img src="images/6bjdwy.jpg" width="200" height="150" alt="北京动物园" />' +
+                            '<img src="images/6bjdwy4.jpg" width="200" height="150" alt="北京动物园" />' +
+                            '<img src="images/6bjdwy5.jpg" width="200" height="150" alt="北京动物园" />' +
+                            '<img src="images/6bjdwy6.jpg" width="200" height="150" alt="北京动物园" />' +
+                            '<img src="images/6bjdwy2.jpg" width="200" height="150" alt="北京动物园" />' +
+                            '<img src="images/6bjdwy1.jpg" width="200" height="150" alt="北京动物园" />',
+                    point: {lng: BJ.ZOO.lng, lat: BJ.ZOO.lat}
+                },
+                {
+                    title: '太平洋海底世界',
+                    content: '<img src="images/7hysj0.jpg" width="200" height="150" alt="太平洋海底世界" />' +
+                            '<img src="images/7hysj1.jpg" width="200" height="150" alt="太平洋海底世界" />' +
+                            '<img src="images/7hysj2.jpg" width="200" height="150" alt="太平洋海底世界" />' +
+                            '<img src="images/7hysj3.jpg" width="200" height="150" alt="太平洋海底世界" />' +
+                            '<img src="images/7hysj5.jpg" width="200" height="150" alt="太平洋海底世界" />',
+                    point: {lng: BJ.SUBMARINE_WORLD.lng, lat: BJ.SUBMARINE_WORLD.lat}
+                },
+                {
+                    title: '中央电视塔',
+                    content: '<img src="images/8dst0.jpg" width="150" height="200" alt="中央电视塔" />' +
+                            '<img src="images/8dst-1.jpg" width="200" height="150" alt="中央电视塔" />' +
+                            '<img src="images/8dst.jpg" width="200" height="150" alt="中央电视塔" />' +
+                            '<img src="images/8dst1.jpg" width="200" height="150" alt="中央电视塔" />' +
+                            '<img src="images/8dst2.jpg" width="200" height="150" alt="中央电视塔" />' +
+                            '<img src="images/8dst3.jpg" width="200" height="150" alt="中央电视塔" />',
+                    point: {lng: BJ.CCTV_TOWER.lng, lat: BJ.CCTV_TOWER.lat}
+                },
+                {
+                    title: '护国寺',
+                    content: '<img src="images/9hgs.jpg" width="300" height="400" alt="护国寺" />',
+                    point: {lng: BJ.HU_GUO_SI.lng, lat: BJ.HU_GUO_SI.lat}
+                },
+                {
+                    title: '上地华联',
+                    content: '<img src="images/10bjhl.jpg" width="160" height="125" alt="上地华联" />' +
+                            '<img src="images/10bjhl1.jpg" width="160" height="125" alt="上地华联" />',
+                    point: {lng: BJ.SHANG_DI_HUA_LIAN.lng, lat: BJ.SHANG_DI_HUA_LIAN.lat}
+                },
+                {
+                    title: '五道口-网易大楼',
+                    content: '<img src="images/11wy.jpg" width="250" height="335" alt="五道口-网易大楼" />',
+                    point: {lng: BJ.WU_DAO_KOU_WANG_YI.lng, lat: BJ.WU_DAO_KOU_WANG_YI.lat}
+                },
+                {
+                    title: '三里屯',
+                    content: '<img src="images/12slt.jpg" width="150" height="200" alt="三里屯" />' +
+                            '<img src="images/12slt1.jpg" width="160" height="120" alt="三里屯" />',
+                    point: {lng: BJ.SAN_LI_TUN.lng, lat: BJ.SAN_LI_TUN.lat}
+                },
+                {
+                    title: '西单',
+                    content: '<img src="images/12w_xd.jpg" width="167" height="125" alt="西单" />' +
+                            '<img src="images/12w_xd1.jpg" width="167" height="125" alt="西单" />' +
+                            '<img src="images/12w_xd2.jpg" width="167" height="125" alt="西单" />' +
+                            '<img src="images/12w_xd3.jpg" width="160" height="125" alt="西单" />' +
+                            '<img src="images/12w_xd5.jpg" width="160" height="210" alt="西单" />' +
+                            '<img src="images/12w_xd4.jpg" width="150" height="200" alt="西单" />',
+                    point: {lng: BJ.XI_DAN.lng, lat: BJ.XI_DAN.lat}
+                },
+                {
+                    title: '圆明园',
+                    content: '<img src="images/13ymy1.jpg" width="167" height="125" alt="圆明园" />' +
+                            '<img src="images/13ymy.jpg" width="167" height="125" alt="圆明园" />' +
+                            '<img src="images/13ymy2.jpg" width="167" height="125" alt="圆明园" />' +
+                            '<img src="images/13ymy3.jpg" width="167" height="125" alt="圆明园" />' +
+                            '<img src="images/13ymy4.jpg" width="167" height="125" alt="圆明园" />',
+                    point: {lng: BJ.YUAN_MING_YUAN.lng, lat: BJ.YUAN_MING_YUAN.lat}
+                },
+                {
+                    title: '香山',
+                    content: '<img src="images/14xs1.jpg" width="167" height="125" alt="香山" />' +
+                            '<img src="images/14xs.jpg" width="167" height="125" alt="香山" />',
+                    point: {lng: BJ.XIANG_SHAN.lng, lat: BJ.XIANG_SHAN.lat}
+                },
+                {
+                    title: '回龙观-啃壹锅',
+                    content: '<img src="images/15hlg.jpg" width="335" height="250" alt="回龙观-啃壹锅" />',
+                    point: {lng: BJ.HUI_LONG_GUAN.lng, lat: BJ.HUI_LONG_GUAN.lat}
+                },
+                {
+                    title: '北体-便宜坊',
+                    content: '<img src="images/17bjtydx1.jpg" width="200" height="150" alt="北体-便宜坊" />' +
+                             '<img src="images/17bjtydx.jpg" width="200" height="150" alt="北体-便宜坊" />',
+                    point: {lng: BJ.BTI_TI_BIAN_YI_FANG.lng, lat: BJ.BTI_TI_BIAN_YI_FANG.lat}
+                },
+                {
+                    title: '王府井',
+                    content: '<img src="images/18wfj3.jpg" width="200" height="150" alt="王府井" />' +
+                            '<img src="images/18wfj1.jpg" width="200" height="150" alt="王府井" />' +
+                            '<img src="images/18wfj2.jpg" width="200" height="150" alt="王府井" />' +
+                            '<img src="images/18wfj4.jpg" width="160" height="210" alt="王府井" />' +
+                            '<img src="images/18wfj5.jpg" width="160" height="210" alt="王府井" />',
+                    point: {lng: BJ.WANG_FU_JING.lng, lat: BJ.WANG_FU_JING.lat}
+                },
+                {
+                    title: '上地菊园',
+                    content: '<img src="images/19jy.jpg" width="400" height="300" alt="上地菊园" />',
+                    point: {lng: BJ.SHANG_DI_JU_YUAN.lng, lat: BJ.SHANG_DI_JU_YUAN.lat}
+                },
+                {
+                    title: '海淀公园',
+                    content: '<img src="images/20hdgy0.jpg" width="200" height="150" alt="海淀公园" />' +
+                            '<img src="images/20hdgy.jpg" width="200" height="150" alt="海淀公园" />' +
+                            '<img src="images/20hdgy1.jpg" width="200" height="150" alt="海淀公园" />' +
+                            '<img src="images/20hdgy2.jpg" width="200" height="150" alt="海淀公园" />' +
+                            '<img src="images/20hdgy4.jpg" width="200" height="150" alt="海淀公园" />',
+                    point: {lng: BJ.HAI_DIAN_GONG_YUAN.lng, lat: BJ.HAI_DIAN_GONG_YUAN.lat}
+                },
+                {
+                    title: '大栅栏',
+                    content: '<img src="images/21dzl8.jpg" width="200" height="150" alt="大栅栏" />' +
+                            '<img src="images/21dzl7.jpg" width="200" height="150" alt="大栅栏" />' +
+                            '<img src="images/21dzl11.jpg" width="160" height="210" alt="大栅栏" />' +
+                            '<img src="images/21dzl10.jpg" width="160" height="210" alt="大栅栏" />' +
+                            '<img src="images/21dzl6.jpg" width="200" height="150" alt="大栅栏" />' +
+                            '<img src="images/21dzl1.jpg" width="200" height="150" alt="大栅栏" />',
+                    point: {lng: BJ.DA_ZHA_LAN.lng, lat: BJ.DA_ZHA_LAN.lat}
+                },
+                {
+                    title: '大栅栏',
+                    content:'<img src="images/21dzl.jpg" width="200" height="150" alt="大栅栏" />' +
+                            '<img src="images/21dzl5.jpg" width="200" height="150" alt="大栅栏" />' +
+                            '<img src="images/21dzl2.jpg" width="175" height="130" alt="大栅栏" />' +
+                            '<img src="images/21dzl3.jpg" width="200" height="150" alt="大栅栏" />' +
+                            '<img src="images/21dzl4.jpg" width="200" height="150" alt="大栅栏" />',
+                    point: {lng: BJ.DA_ZHA_LAN.lng, lat: BJ.DA_ZHA_LAN.lat}
+                },
+                {
+                    title: '朝阳-制作泥塑像',
+                    content: '<img src="images/100bj_cyq.jpg" width="160" height="210" alt="朝阳-制作泥塑像" />' +
+                            '<img src="images/100bj_cyq1.jpg" width="160" height="210" alt="朝阳-制作泥塑像" />' +
+                            '<img src="images/100bj_cyq2.jpg" width="160" height="210" alt="朝阳-制作泥塑像" />',
+                    point: {lng: BJ.CHAO_YANG_QU.lng, lat: BJ.CHAO_YANG_QU.lat}
+                },
+                {
+                    title: '欢乐谷',
+                    content: '<img src="images/110bj_hlg0.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg01.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg4.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg5.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg6.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg7.jpg" width="200" height="150" alt="欢乐谷" />',
+                    point: {lng: BJ.HUAN_LE_GU.lng, lat: BJ.HUAN_LE_GU.lat}
+                },
+                {
+                    title: '欢乐谷',
+                    content: '<img src="images/110bj_hlg8.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg9.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg10.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg10_1.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg11.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg2.jpg" width="200" height="150" alt="欢乐谷" />' +
+                            '<img src="images/110bj_hlg3.jpg" width="200" height="150" alt="欢乐谷" />',
+                    point: {lng: BJ.HUAN_LE_GU.lng, lat: BJ.HUAN_LE_GU.lat}
+                },
+                {
+                    title: '大裤衩',
+                    content: '<img src="images/111bj_dkc.jpg" width="160" height="210" alt="大裤衩" />' +
+                            '<img src="images/111bj_dkc1.jpg" width="160" height="210" alt="大裤衩" />',
+                    point: {lng: BJ.DA_KU_CHA.lng, lat: BJ.DA_KU_CHA.lat}
+                },
+                {
+                    title: '木樨园',
+                    content: '<img src="images/201bj_mxy.jpg" width="160" height="210" alt="木樨园" />' +
+                            '<img src="images/201bj_mxy1.jpg" width="160" height="210" alt="木樨园" />',
+                    point:  {lng: BJ.MU_XI_YUAN.lng, lat: BJ.MU_XI_YUAN.lat}
+                },
+                {
+                    title: '上地',
+                    content: '<img src="images/202bj_sd7j.jpg" width="425" height="320" alt="上地" />',
+                    point: {lng: BJ.SHANG_DI.lng, lat: BJ.SHANG_DI.lat}
+                }
+            ];
+            loopWin(bj_photos, 2500, panZoom_BJ2TJ);
+        });
+    }, 1000);
+}
+function panZoom_BJ2TJ() {
+    zoomTo(9, 1000, function() {
+        map.panTo(new BMap.Point(CITY_BJS.lng, CITY_BJS.lat));
+        setTimeout(function() {
+            var start   = new BMap.Point(BJ.HUO_CHE_NAN_ZHAN.lng, BJ.HUO_CHE_NAN_ZHAN.lat);
+            var end = new BMap.Point(TJ.HUO_CHE_ZHAN.lng, TJ.HUO_CHE_ZHAN.lat);
+            var driving2 = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+            driving2.search(start, end);
+            setTimeout(function() {
+                var between = [
+                    {
+                        title: '北京 → 天津',
+                        content: '<img src="images/50tj0.jpg" width="300" height="400" alt="「第一次旅行」" />',
+                        point: BJ.HUO_CHE_NAN_ZHAN
+                    }
+                ];
+                loopWin(between, 2000, showTJPhotos);
+            }, 2000);
+        }, 1000);
+    });
+}
+function showTJPhotos() {
+    map.clearOverlays();
+    map.panTo(new BMap.Point(CITY_TJS.lng, CITY_TJS.lat));
+    setTimeout(function () {
+        zoomTo(13, 1000, function () {
+            var tj_photos = [
+                {
+                    title: '天津-火车站',
+                    content: '<img src="images/50tj.jpg" width="200" height="150" alt="天津火车站" />' +
+                            '<img src="images/56tj_tjhcz1.jpg" width="200" height="150" alt="天津火车站" />' +
+                            '<img src="images/56tj_tjhcz.jpg" width="200" height="150" alt="天津火车站" />',
                     point: {lng: 113.252764, lat: 23.131838}
                 },
                 {
-                    title: '中央电视塔-空中邮局',
-                    content: '<img src="images/4nlgx.jpg" width="500" height="373" alt="中央电视塔-空中邮局" />',
+                    title: '天津-狗不理总店',
+                    content: '<img src="images/50tj_gbl.jpg" width="200" height="150" alt="天津-狗不理总店" />' +
+                            '<img src="images/50tj_gb4.jpg" width="200" height="150" alt="天津-狗不理总店" />' +
+                            '<img src="images/50tj_gbl.jpg" width="200" height="150" alt="天津-狗不理总店" />' +
+                            '<img src="images/50tj_gb2.jpg" width="200" height="150" alt="天津-狗不理总店" />' +
+                            '<img src="images/50tj_gb3.jpg" width="200" height="150" alt="天津-狗不理总店" />' ,
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-南市食品街',
+                    content: '<img src="images/51tj_nsc0.jpg" width="150" height="200" alt="天津-南市食品街" />' +
+                            '<img src="images/51tj_nsc1.jpg" width="200" height="150" alt="天津-南市食品街" />' +
+                            '<img src="images/51tj_nsc2.jpg" width="150" height="200" alt="天津-南市食品街" />'  ,
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-瓷房子',
+                    content: '<img src="images/52tj_cfz.jpg" width="150" height="200" alt="天津-瓷房子" />' +
+                            '<img src="images/52tj_cfz1.jpg" width="150" height="200" alt="天津-瓷房子" />' +
+                            '<img src="images/52tj_cfz2.jpg" width="200" height="150" alt="天津-瓷房子" />' +
+                            '<img src="images/52tj_cfz3.jpg" width="200" height="150" alt="天津-瓷房子" />' +
+                            '<img src="images/52tj_cfz4.jpg" width="200" height="150" alt="天津-瓷房子" />' ,
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-步行街',
+                    content: '<img src="images/53tj_nml.jpg" width="200" height="150" alt="天津-步行街" />' +
+                            '<img src="images/53tj_nml1.jpg" width="200" height="150" alt="天津-步行街" />',
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-意式风景区',
+                    content: '<img src="images/54tj_ysfjq0.jpg" width="200" height="150" alt="天津-意式风景区" />' +
+                            '<img src="images/54tj_ysfjq.jpg" width="200" height="150" alt="天津-意式风景区" />' +
+                            '<img src="images/54tj_ysfjq1.jpg" width="200" height="150" alt="天津-意式风景区" />' +
+                            '<img src="images/54tj_ysfjq2.jpg" width="200" height="150" alt="天津-意式风景区" />' +
+                            '<img src="images/54tj_ysfjq3.jpg" width="200" height="150" alt="天津-意式风景区" />',
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-意式风景区',
+                    content: '<img src="images/54tj_ysfjq4.jpg" width="200" height="150" alt="天津-意式风景区" />' +
+                            '<img src="images/54tj_ysfjq5.jpg" width="200" height="150" alt="天津-意式风景区" />' +
+                            '<img src="images/54tj_ysfjq6.jpg" width="200" height="150" alt="天津-意式风景区" />' +
+                            '<img src="images/54tj_ysfjq7.jpg" width="200" height="150" alt="天津-意式风景区" />'+
+                            '<img src="images/54tj_ysfjq8.jpg" width="200" height="150" alt="天津-意式风景区" />'+
+                            '<img src="images/54tj_ysfjq9.jpg" width="200" height="150" alt="天津-意式风景区" />',
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-天津之眼',
+                    content: '<img src="images/55tj_tjzy.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy1.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy2.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy3.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy4.jpg" width="150" height="200" alt="天津-天津之眼" />' ,
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-天津之眼',
+                    content: '<img src="images/55tj_tjzy5.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy6.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy7.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy8.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy9.jpg" width="150" height="200" alt="天津-天津之眼" />' +
+                            '<img src="images/55tj_tjzy10.jpg" width="150" height="200" alt="天津-天津之眼" />' ,
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-古玩城',
+                    content: '<img src="images/58tj_gwj2.jpg" width="150" height="200" alt="天津-古玩城" />' +
+                            '<img src="images/58tj_gwj3.jpg" width="150" height="200" alt="天津-古玩城" />' +
+                            '<img src="images/58tj_gwj1.jpg" width="150" height="200" alt="天津-古玩城" />' +
+                            '<img src="images/58tj_gwj.jpg" width="150" height="200" alt="天津-古玩城" />' ,
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-名流茶楼',
+                    content: '<img src="images/57tj_mlcl0.jpg" width="150" height="200" alt="天津-名流茶楼" />' +
+                            '<img src="images/57tj_mlcl.jpg" width="150" height="200" alt="天津-名流茶楼" />' +
+                            '<img src="images/57tj_mlcl1.jpg" width="150" height="200" alt="天津-名流茶楼" />' ,
+                    point: {lng: 113.252764, lat: 23.131838}
+                },
+                {
+                    title: '天津-名流茶楼',
+                    content: '<img src="images/57tj_mlcl0.jpg" width="150" height="200" alt="天津-名流茶楼" />' +
+                            '<img src="images/57tj_mlcl.jpg" width="150" height="200" alt="天津-名流茶楼" />' +
+                            '<img src="images/57tj_mlcl1.jpg" width="150" height="200" alt="天津-名流茶楼" />' ,
                     point: {lng: 113.252764, lat: 23.131838}
                 }
             ];
-            loopWin(photos, 2500, wannaTo);
+            loopWin(tj_photos, 2500, wannaTo);
         });
     }, 1000);
+}
+function showPhotos() {
+    setTimeout(function() {
+        var between = [
+            {
+                title: '北京 → 儋州',
+                content: '3000+ km.',
+                point: BJ_ZGCSLGY
+            },
+            {
+                title: '儋州 → 北京',
+                content: '38 hours by train. or 4 hours by airplane.',
+                point: DZ_ZXGY
+            },
+            {
+                title: '「变得是距离，不变的是坚持」！',
+                content: '<img src="images/0feiji.jpg" width="200" height="149" alt="「变得是距离，不变的是坚持」" />',
+                point: DZ_ZXGY
+            }
+        ];
+        loopWin(between, 2000, showPhotos);
+    }, 2000);
+    showBJPhotos();
+    showTJPhotos();
 }
 
 function wannaTo() {
@@ -344,7 +722,7 @@ function wannaTo() {
     });
 }
 
-var markerText = [
+var happyBirthdayMarkerText = [
     {
         lng : 80.050373,
         lat : 39.924749
@@ -1031,7 +1409,7 @@ if (!Array.prototype.shuffle) {
         return this;
     };
 }
-markerText.shuffle();
+happyBirthdayMarkerText.shuffle();
 function loopAddMarker(markers, callback) {
     var i           = 0;
     var len         = markers.length;
@@ -1055,7 +1433,7 @@ function showMarkerText() {
     map.panTo(new BMap.Point(82.699584, 39.8202));
     setTimeout(function() {
         zoomTo(9, 1000, function() {
-            loopAddMarker(markerText, function() {
+            loopAddMarker(happyBirthdayMarkerText, function() {
                 setTimeout(function() {
                     slideDown('theEnd', 1000, function() {
                         var theEndText = '<div id="theEndText">Happy birthday to my dearest Meijun :) --by LOO2K<br />' +
@@ -1128,8 +1506,8 @@ function init() {
     map.clearOverlays();
     map.reset();
     MUSIC.play();
-    map.panTo(new BMap.Point(GZ_GTC.lng, GZ_GTC.lat));
-    panZoom_GTC();
+    map.panTo(new BMap.Point(DZ_ZXGY.lng, DZ_ZXGY.lat));
+    panZoom_DZZXGY();
 }
 
 function loadScript() {
